@@ -1,0 +1,112 @@
+# 现金活动机器人配置文件
+# 版本: v2.0
+# 创建时间: 2026-02-19
+
+# OpenClaw 基础配置
+openclaw:
+  model: deepseek/deepseek-chat
+  default_model: deepseek/deepseek-chat
+  thinking: off
+  workspace: /root/.openclaw/workspace
+
+# QQ Bot 配置
+qqbot:
+  enabled: true
+  appid: "YOUR_APP_ID"
+  token: "YOUR_TOKEN"
+  capabilities:
+    inlineButtons: "allowlist"
+  
+  # 定时提醒配置
+  cron:
+    enabled: true
+    default_channel: qqbot
+    default_to: "62DF847C1D018ABA73CE6D740F3917D3"
+
+# 现金活动配置
+cash_activities:
+  enabled: true
+  activities:
+    - name: "支付宝新春红包"
+      platform: "alipay"
+      estimated_reward: "20-50元"
+      requirements: "手机验证码"
+      status: "等待参与"
+    
+    - name: "微信支付优惠"
+      platform: "wechat"
+      estimated_reward: "15-30元"
+      requirements: "微信登录"
+      status: "等待参与"
+    
+    - name: "抖音现金任务"
+      platform: "douyin"
+      estimated_reward: "10-25元"
+      requirements: "抖音账号"
+      status: "等待参与"
+    
+    - name: "银行APP福利"
+      platform: "bank"
+      estimated_reward: "5-20元"
+      requirements: "银行卡验证"
+      status: "等待参与"
+    
+    - name: "国际平台现金奖励"
+      platform: "international"
+      estimated_reward: "10-30元"
+      requirements: "邮箱验证"
+      status: "等待参与"
+
+# 用户信息
+user:
+  qq: "10821558"
+  wechat: "w10821558"
+  phone: "15822348053"
+  email: "10821558@qq.com"
+  backup_email: "4257754@qq.com"
+
+# 支付配置
+payment:
+  alipay:
+    qr_code: "已配置"
+    enabled: true
+  
+  wechat:
+    qr_code: "已配置"
+    enabled: true
+
+# 技能配置
+skills:
+  enabled:
+    - qqbot-cron
+    - qqbot-media
+    - cash-activities
+    - feishu-doc
+    - feishu-drive
+    - nano-pdf
+    - Agent Browser
+  
+  auto_update: true
+  update_interval: "7d"
+
+# 记忆配置
+memory:
+  daily_files: true
+  memory_dir: "/root/.openclaw/workspace/memory"
+  long_term_file: "/root/.openclaw/workspace/MEMORY.md"
+  backup_enabled: true
+  backup_interval: "1d"
+
+# 安全配置
+security:
+  api_key_management: "vault"
+  encryption_enabled: true
+  external_links_warning: true
+  untrusted_content_filter: true
+
+# 性能配置
+performance:
+  max_api_calls_per_day: 50
+  response_timeout_seconds: 30
+  critical_response_timeout_seconds: 5
+  cache_enabled: true
