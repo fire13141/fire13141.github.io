@@ -1,3 +1,4 @@
+---\nlayout: default\nredirect_from: /\n---\n
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
