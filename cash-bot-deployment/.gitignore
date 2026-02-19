@@ -1,0 +1,27 @@
+# 忽略文件
+*.log
+*.backup
+*.tmp
+*.swp
+*.swo
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# 备份文件
+backup/
+*.backup.*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 测试文件
+test-*
+temp-*
+
+# 部署临时文件
+deploy-*.log
+verify-*.log

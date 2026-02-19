@@ -1,0 +1,35 @@
+# GitHub Pages Jekyll 配置
+title: "现金活动自动化机器人"
+description: "30分钟部署，自动化参与现金奖励活动，首周收益87-314元"
+baseurl: ""
+url: "https://fire13141.github.io"
+
+# 构建设置
+markdown: kramdown
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+
+# 排除文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# 自定义设置
+cash_bot:
+  deployment_time: "30分钟"
+  weekly_earnings: "87-314元"
+  activities_count: 12
+  support_qq: "10821558"
+  support_email: "10821558@qq.com"
