@@ -5,11 +5,38 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# 重定向规则
+# 重定向规则 - 排除静态文件
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+  conditions = {Language = ["en"], Country = ["US"]}
+  
+# 排除验证文件（不被重定向到index.html）
+[[redirects]]
+  from = "/ads.txt"
+  to = "/ads.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/google*.html"
+  to = "/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
 
 # 自定义域名设置（示例）
 [[redirects]]
