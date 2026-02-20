@@ -97,7 +97,7 @@
 
 # 环境变量（用于Google服务）
 [context.production.environment]
-  GOOGLE_ADSENSE_ID = "ca-pub-YOUR_PUBLISHER_ID"
+  GOOGLE_ADSENSE_ID = "ca-pub-2466044878440567"
   GOOGLE_ANALYTICS_ID = "UA-XXXXXXXXX-X"
 
 # 部署分支设置
