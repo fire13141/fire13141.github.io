@@ -1,0 +1,14 @@
+# Allow access to ads.txt
+<Files "ads.txt">
+    Require all granted
+</Files>
+
+# Set proper MIME type
+AddType text/plain .txt
+
+# Disable caching for verification files
+<FilesMatch "^(ads\.txt|google.*\.html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</FilesMatch>

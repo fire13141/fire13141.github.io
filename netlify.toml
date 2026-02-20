@@ -40,6 +40,14 @@
       frame-src https://www.google.com;
     """
 
+# ads.txt特殊配置
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Content-Type = "text/plain; charset=utf-8"
+
 # 缓存策略
 [[headers]]
   for = "/assets/*"
