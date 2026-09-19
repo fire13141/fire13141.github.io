@@ -38,7 +38,7 @@
     .trust-footer { margin-top: 24px; padding: 18px 16px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; text-align: center; }
     .trust-badges { display: flex; justify-content: center; gap: 14px; font-size: 11px; font-weight: 700; color: #059669; margin-bottom: 6px; }
     .trust-desc { font-size: 10.5px; color: #64748b; line-height: 1.4; margin-bottom: 4px; }
-    .trust-cert { font-size: 9.5px; color: #9ca3af; }
+    .trust-cert { font-size: 9.5px; color: #94a3b8; }
   </style>
 </head>
 <body>
@@ -542,5 +542,20 @@
       <div class="trust-cert">Official Merchant Redirects • Buyer Protection Guaranteed</div>
     </div>
   </div>
+
+  <!-- Cloudflare Web Analytics (Auto-Detect Token) -->
+  <script>
+    (function() {
+      var t = window.location.hostname.indexOf('fire1419') !== -1 
+              ? 'aa0c0628271c455f91c89ad62cd85183' 
+              : '02e2938c6a7243a0aef519e619c4e9de';
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      s.setAttribute('data-cf-beacon', JSON.stringify({ token: t }));
+      document.body.appendChild(s);
+    })();
+  <\/script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
